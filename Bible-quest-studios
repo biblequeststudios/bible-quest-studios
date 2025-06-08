@@ -1,0 +1,26 @@
+// Project: Bible Quest Studios PWA (Next.js) - Free hosting on Vercel/GitHub // ------------------------------------------------------------------------------ // File: package.json { "name": "bible-quest-studios", "version": "1.0.0", "scripts": { "dev": "next dev", "build": "next build", "start": "next start" }, "dependencies": { "next": "latest", "react": "latest", "react-dom": "latest", "firebase": "latest", "next-auth": "latest", "axios": "latest", "tailwindcss": "latest" } }
+
+// File: tailwind.config.js module.exports = { content: ["./pages//*.{js,jsx}", "./components//*.{js,jsx}"], theme: { extend: {} }, plugins: [], };
+
+// File: lib/firebase.js import { initializeApp } from 'firebase/app'; import { getFirestore } from 'firebase/firestore'; import { getAuth } from 'firebase/auth'; const firebaseConfig = { apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY, authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN, projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID, }; const app = initializeApp(firebaseConfig); export const db = getFirestore(app); export const auth = getAuth(app);
+
+// File: pages/api/mpesa.js import axios from 'axios'; export default async function handler(req, res) { // stub: implement STK Push logic with Daraja API res.status(200).json({ message: 'mpesa endpoint placeholder' }); }
+
+// File: pages/api/paypal.js import axios from 'axios'; export default async function handler(req, res) { // stub: create and capture PayPal orders res.status(200).json({ message: 'paypal endpoint placeholder' }); }
+
+// File: pages/index.js import Quiz from '../components/Quiz'; export default function Home() { return ( <div className="p-4"> <h1 className="text-2xl font-bold">Bible Quest Daily Challenge</h1> <Quiz /> </div> ); }
+
+// File: components/Quiz.js import { useState, useEffect } from 'react'; import wordList from '../data/wordList.json'; const Quiz = () => { // same logic as React skeleton return <div>Wordle-style quiz placeholder</div>; }; export default Quiz;
+
+// File: pages/practice.js import Practice from '../components/Practice'; export default function PracticePage() { return <Practice />; } // File: components/Practice.js const Practice = () => <div>Practice mode placeholder</div>; export default Practice;
+
+// File: pages/study.js import Study from '../components/Study'; export default function StudyPage() { return <Study />; } // File: components/Study.js const Study = () => <div>Study notes & devotionals placeholder</div>; export default Study;
+
+// File: pages/admin.js import { useSession } from 'next-auth/react'; export default function Admin() { // show user records, payments, overrides return <div>Admin Dashboard placeholder</div>; }
+
+// File: pages/api/auth/[...nextauth].js import NextAuth from 'next-auth'; import EmailProvider from 'next-auth/providers/email'; export default NextAuth({ providers: [ EmailProvider({ server: process.env.EMAIL_SERVER, from: process.env.EMAIL_FROM, }), ], database: process.env.DATABASE_URL, });
+
+// Deployment: // 1. Push to GitHub repository // 2. Sign up at Vercel (free) // 3. Link repo and set environment vars // 4. Deploy – get your PWA URL (e.g., https://bible-quest-studios.vercel.app)
+
+// All features: daily quiz, practice, study mode, auth, payment stubs, admin dashboard.
+
