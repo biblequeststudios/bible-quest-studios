@@ -2,7 +2,12 @@
   "name": "bible-quest-studios",
   "version": "1.0.0",
   "description": "Bible Quest Studios App",
-  "author": "E",
+  "author": "E'hud Maina <faithforgestudios@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biblequeststudios/bible-quest-studios.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
