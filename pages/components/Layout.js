@@ -4,9 +4,9 @@ import React from 'react';
 export default function Layout({ children }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="p-4 bg-blue-900 text-white font-bold">Bible Quest Studios</header>
+      <header className="p-4 bg-blue-900 text-white font-bold">Bible Quest Studios</Header>
       <main className="flex-1">{children}</main>
-      <footer className="p-4 bg-blue-900 text-white text-center">© 2025 Bible Quest Studios</footer>
+      <footer className="p-4 bg-blue-900 text-white text-center">© 2025 Bible Quest Studios</Footer>
     </div>
   );
 }
