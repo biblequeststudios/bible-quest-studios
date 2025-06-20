@@ -1,0 +1,55 @@
+# Next.js build output
+.next/
+out/
+build/
+
+# Dependency directories
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Env and credentials files
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# VSCode and IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+logs/
+*.log
+
+# By default, don't include credentials or API keys!
+# Never commit:
+#   - .env.local
+#   - .env
+#   - credentials.txt
+#   - .pem/.key/.crt/.p12 files
+#   - .env.production
+#   - .env.development
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Zip and archive files
+*.zip
+*.tar.gz
+*.tgz
