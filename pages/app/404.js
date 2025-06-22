@@ -1,4 +1,6 @@
-import Layout from "../components/Layout";
+import Layout from '../components/Layout'
+import QuizCard from '../components/QuizCard'
+
 
 export default function Custom404() {
   return (
