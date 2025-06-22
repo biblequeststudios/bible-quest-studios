@@ -1,15 +1,13 @@
-export default function Header() {
+export default function Layout({ children }) {
   return (
-    <header className="bg-blue-700 text-white py-4 shadow">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Bible Quest</h1>
-        <nav>
-          <a href="/" className="px-2 hover:underline">Home</a>
-          <a href="/practice" className="px-2 hover:underline">Practice</a>
-          <a href="/study" className="px-2 hover:underline">Study</a>
-          <a href="/admin" className="px-2 hover:underline">Admin</a>
-        </nav>
-      </div>
-    </header>
+    <div className="min-h-screen flex flex-col">
+      <header className="p-4 bg-blue-900 text-white font-bold">
+        Bible Quest Studios
+      </header>
+      <main className="flex-1">{children}</main>
+      <footer className="p-4 bg-gray-100 text-center text-xs text-gray-500">
+        © {new Date().getFullYear()} Bible Quest Studios
+      </footer>
+    </div>
   );
 }
